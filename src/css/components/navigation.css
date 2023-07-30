@@ -1,0 +1,49 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 60px;
+    background-color: var(--white);
+    color: var(--navy);
+    /* justify-content: flex-end; */
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 55px;
+    min-height: inherit;
+    align-items: center;
+    text-align: center;
+}
+
+.progressBar {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    min-height: 4px;
+}
+.progressBar progress {
+    appearance: none;
+    width: 100vw;
+    block-size: 5px;
+    min-height: 4px;
+}
+
+.dark ::-webkit-progress-bar {
+    background-color: var(--navy);
+}
+.white ::-webkit-progress-bar {
+    background-color: var(--white);
+}
+
+.dark ::-webkit-progress-value {
+    background-color: var(--white);
+}
+.white ::-webkit-progress-value {
+    background-color: var(--navy);
+}

@@ -1,0 +1,16 @@
+.skills_content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 70vw;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* border: 1px solid var(--gray); */
+}
+
+.skills_content img {
+    /* border: 1px solid var(--gray); */
+    width: 10vw;
+    max-width: 120px;
+    justify-self: center;
+}

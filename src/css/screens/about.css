@@ -1,0 +1,29 @@
+.about_content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 100%;
+}
+
+.mimoticon {
+    width: 25vw;
+    max-width: 300px;
+    min-width: 160px;
+}
+
+.about_left {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.about_left p {
+    text-align: center;
+    font-size: 18px;
+}
+
+@media (min-width: 1024) {
+    .about_content {
+        display: grid;
+        /* height: 100%; */
+    }
+}

@@ -1,0 +1,27 @@
+.toggle_wrap {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.toggle_btn {
+    background-color: var(--navy);
+    color: var(--white);
+    font-size: 20px;
+    padding: 10px 10px 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 0;
+}
+.darkBtn {
+    background-color: var(--white);
+    color: var(--navy);
+}
+.whiteBth {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+/* media query: on phone size, resize button to smaller */

@@ -1,0 +1,32 @@
+.contact_content {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0;
+}
+.contact_item {
+    width: 35vw;
+}
+
+.contact_left {
+    font-size: 2em;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+.contact_input {
+    height: 2.5em;
+    margin-bottom: 1em;
+    min-height: 2em;
+}
+
+textarea {
+    resize: none;
+    margin-bottom: 1em;
+    min-height: 2em;
+}

@@ -1,0 +1,22 @@
+.backBtn {
+    position: fixed;
+    top: 15px;
+    left: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--navy);
+    color: var(--white);
+}
+.darkBtn {
+    background-color: var(--white);
+    color: var(--navy);
+}
+.whiteBth {
+    background-color: var(--navy);
+    color: var(--white);
+}
