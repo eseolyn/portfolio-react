@@ -17,3 +17,15 @@
     width: 25vw;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.thumbNail_btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy);
+    color: var(--white);
+    cursor: pointer;
+}

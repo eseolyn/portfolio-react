@@ -18,13 +18,13 @@ const Projects = () => {
     return (
         <>
             <ProjectsHeader />
-            <section className={"tab section " + (isDark ? "dark" : "white")}>
+            <section className={"tab section" + (isDark ? " dark" : " white")}>
                 <div className="project-headers">
                     {tabArr.map((el, index) => (
                         <div
                             className={
                                 "project-header" +
-                                (activeTab === index ? "active" : "")
+                                (activeTab === index ? " active" : "")
                             }
                             onClick={() => setActiveTab(index)}
                         >

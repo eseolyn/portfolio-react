@@ -12,11 +12,3 @@
     background-color: var(--navy);
     color: var(--white);
 }
-.darkBtn {
-    background-color: var(--white);
-    color: var(--navy);
-}
-.whiteBth {
-    background-color: var(--navy);
-    color: var(--white);
-}
