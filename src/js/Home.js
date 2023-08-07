@@ -4,17 +4,19 @@ import ProjectThumbnail from "./ProjectThumbnail";
 import Contact from "./Contact";
 import Skills from "./Skills";
 import ToggleBtn from "./components/ToggleBtn";
+import { useDark } from "../ThemeContext";
 
-const Main = () => {
+const Home = () => {
+    const { isDark } = useDark();
     return (
-        <main>
+        <div className={"home" + (isDark ? " dark" : "")}>
             <About />
             <ProjectThumbnail />
             <Skills />
             <Contact />
             <ToggleBtn />
-        </main>
+        </div>
     );
 };
 
-export default Main;
+export default Home;

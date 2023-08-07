@@ -1,9 +1,7 @@
 import React from "react";
 import mimoticon from "../img/memoticon_q.png";
-import { useDark } from "../ThemeContext";
 
 const About = () => {
-    const { isDark } = useDark();
     /* if (isDark === undefined) {
         throw new Error(
             "useDarkState should be used within ThemeContextProvider"
@@ -11,12 +9,12 @@ const About = () => {
     } */
     return (
         <>
-            <section className={"section about " + (isDark ? "dark" : "white")}>
+            <div className="about section">
                 <div className="title">
                     <span>About</span>
                 </div>
 
-                <div className="about_content">
+                <div className="content about_content">
                     <div className="about_item about_left">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -39,7 +37,7 @@ const About = () => {
                         />
                     </div>
                 </div>
-            </section>
+            </div>
         </>
     );
 };

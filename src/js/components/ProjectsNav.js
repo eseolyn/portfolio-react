@@ -2,12 +2,12 @@ import React from "react";
 import { useDark } from "../../ThemeContext";
 import BackBtn from "./BackBtn";
 
-const ProjectsHeader = () => {
+const ProjectsNav = () => {
     const { isDark } = useDark();
 
     return (
         <>
-            <nav className={"nav " + (isDark ? "dark" : "white")}>
+            <nav className={"nav" + (isDark ? " dark" : "")}>
                 <BackBtn />
                 <div className="title">
                     <span>Projects</span>
@@ -17,4 +17,4 @@ const ProjectsHeader = () => {
     );
 };
 
-export default ProjectsHeader;
+export default ProjectsNav;

@@ -26,8 +26,7 @@ const ToggleBtn = () => {
             <div className="toggle_wrap">
                 <button
                     className={
-                        "toggle_btn scrollUpBtn " +
-                        (isDark ? "darkBtn" : "whiteBtn")
+                        "toggle_btn scrollUpBtn" + (isDark ? " darkBtn" : "")
                     }
                     onClick={handleScroll}
                     ref={scrollRef}
@@ -36,8 +35,7 @@ const ToggleBtn = () => {
                 </button>
                 <button
                     className={
-                        "toggle_btn DarkModeBtn " +
-                        (isDark ? "darkBtn" : "whiteBtn")
+                        "toggle_btn DarkModeBtn" + (isDark ? " darkBtn" : "")
                     }
                     onClick={onToggle}
                 >

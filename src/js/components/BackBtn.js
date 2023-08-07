@@ -8,7 +8,7 @@ const BackBtn = () => {
     return (
         <>
             <div
-                className={"backBtn" + (isDark ? " darkBtn" : " whiteBtn")}
+                className={"backBtn" + (isDark ? " darkBtn" : "")}
                 onClick={() => navigate("/")}
             >
                 &larr;

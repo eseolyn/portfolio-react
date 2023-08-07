@@ -1,18 +1,12 @@
 import React from "react";
-import { useDark } from "../ThemeContext";
 
 const Skills = () => {
-    const { isDark } = useDark();
-
     return (
-        <section
-            id="skills"
-            className={"section " + (isDark ? "dark" : "white")}
-        >
+        <div className="skills section">
             <div className="title">
                 <span>Skills</span>
             </div>
-            <div className="skills_content">
+            <div className="content skills_content">
                 <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
                     alt="html5"
@@ -59,7 +53,7 @@ const Skills = () => {
                     </span>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 

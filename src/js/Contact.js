@@ -3,7 +3,6 @@ import { BsGithub } from "react-icons/bs";
 import { SiNotion } from "react-icons/si";
 import { BiLogoGmail } from "react-icons/bi";
 // import { RiMailSendLine } from "react-icons/ri";
-import { useDark } from "../ThemeContext";
 
 const Contact = () => {
     const [fullName, setFullName] = useState("");
@@ -29,19 +28,15 @@ const Contact = () => {
         }
     };
 
-    const { isDark } = useDark();
     const GithubUrl = "https://github.com/eunseolYun";
     const GoogleEmail = "skopdt73@gmail.com";
     return (
         <>
-            <section
-                id="contact"
-                className={"section " + (isDark ? "dark" : "white")}
-            >
+            <div className="contact section">
                 <div className="title">
                     <span>Contact</span>
                 </div>
-                <div className="contact_content">
+                <div className="content contact_content">
                     <div className="contact_item contact_left">
                         <span>want contact me?</span>
                         <div className="contact_icon">
@@ -88,7 +83,7 @@ const Contact = () => {
                         </button>
                     </form>
                 </div>
-            </section>
+            </div>
         </>
     );
 };

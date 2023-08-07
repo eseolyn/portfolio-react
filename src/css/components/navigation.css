@@ -1,6 +1,5 @@
 .nav {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     width: 100vw;
     height: 60px;
     background-color: var(--white);
@@ -20,8 +19,12 @@
     text-align: center;
 }
 
+.navigationItem {
+    font-size: 18px;
+}
+
 .progressBar {
-    display: flex;
+    display: grid;
     /* flex-direction: column; */
     /* justify-content: space-around; */
     /* align-items: center; */
@@ -37,13 +40,13 @@
 .dark ::-webkit-progress-bar {
     background-color: var(--navy);
 }
-.white ::-webkit-progress-bar {
+::-webkit-progress-bar {
     background-color: var(--white);
 }
 
 .dark ::-webkit-progress-value {
     background-color: var(--white);
 }
-.white ::-webkit-progress-value {
+::-webkit-progress-value {
     background-color: var(--navy);
 }

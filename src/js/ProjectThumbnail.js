@@ -1,35 +1,30 @@
 import React from "react";
-import { useDark } from "../ThemeContext";
 import { useNavigate } from "react-router-dom";
+import { useDark } from "../ThemeContext";
 
 const ProjectThumbnail = () => {
     const { isDark } = useDark();
     const navigate = useNavigate();
     return (
-        <section
-            id="projectThumbnail"
-            className={"section " + (isDark ? "dark" : "white")}
-        >
+        <div className="projectThumbnail section">
             <div className="title">
                 <span>Projects</span>
             </div>
-            <div className="thumbNails_content">
+            <div className="content thumbNails_content">
                 <div className="thumbNail_item"> thumbnail 1</div>
                 <div className="thumbNail_item"> thumbnail 2</div>
                 <div className="thumbNail_item"> thumbnail 3</div>
             </div>
             {/* thumbnail hover => anim size up */}
             <div
-                className={
-                    "thumbNail_btn" + (isDark ? " darkBtn" : " whiteBtn")
-                }
+                className={"thumbNail_btn" + (isDark ? " darkBtn" : "")}
                 onClick={() => navigate("/projects")}
             >
                 more
             </div>
             {/* <button>more &rarr;</button>
             button에 '/projects'로 가는 링크 걸기 */}
-        </section>
+        </div>
     );
 };
 

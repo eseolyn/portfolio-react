@@ -5,19 +5,19 @@ import { useDark } from "../../ThemeContext";
 const Navigation = () => {
     const { isDark } = useDark();
     return (
-        <nav className={"nav " + (isDark ? "dark" : "white")}>
+        <nav className={"nav" + (isDark ? " dark" : "")}>
             <div className="navigation">
                 <ScrollTo to="about" spy={true} smooth={true}>
-                    <div className="navigation_item">About</div>
+                    <div className="navigationItem">About</div>
                 </ScrollTo>
                 <ScrollTo to="projectThumbnail" spy={true} smooth={true}>
-                    <div className="navigation_item">projects</div>
+                    <div className="navigationItem">projects</div>
                 </ScrollTo>
                 <ScrollTo to="skills" spy={true} smooth={true}>
-                    <div className="navigation_item">skills</div>
+                    <div className="navigationItem">skills</div>
                 </ScrollTo>
                 <ScrollTo to="contact" spy={true} smooth={true}>
-                    <div className="navigation_item">contact</div>
+                    <div className="navigationItem">contact</div>
                 </ScrollTo>
             </div>
             {/* scroll bar : position absolute, 위치 vw,em, mask?? */}
