@@ -1,32 +1,50 @@
-.contact_content {
-    display: flex;
-    flex-direction: row;
+.contactContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 70vw;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 1em 0;
+    gap: 20px;
 }
-.contact_item {
+.contactItem {
     width: 35vw;
 }
 
-.contact_left {
+.contactLeft {
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 30px;
     font-size: 2em;
 }
 
-.contact_form {
+.contactForm {
     display: flex;
     flex-direction: column;
     height: 200px;
 }
-.contact_input {
+.contactInput {
     height: 2.5em;
     margin-bottom: 1em;
     min-height: 2em;
 }
 
-textarea {
+.contactMessage {
     resize: none;
     margin-bottom: 1em;
     min-height: 2em;
+}
+
+.contactIcons {
+    display: grid;
+    gap: 30px;
+    grid-auto-flow: column;
+    width: fit-content;
+}
+
+.contactIcon {
+    width: fit-content;
 }

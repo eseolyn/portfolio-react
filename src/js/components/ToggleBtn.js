@@ -24,7 +24,7 @@ const ToggleBtn = () => {
     return (
         <div className="toggle">
             <div className="toggle_wrap">
-                <button
+                <div
                     className={
                         "toggle_btn scrollUpBtn" + (isDark ? " darkBtn" : "")
                     }
@@ -32,15 +32,15 @@ const ToggleBtn = () => {
                     ref={scrollRef}
                 >
                     <HiMiniArrowUp />
-                </button>
-                <button
+                </div>
+                <div
                     className={
                         "toggle_btn DarkModeBtn" + (isDark ? " darkBtn" : "")
                     }
                     onClick={onToggle}
                 >
                     <BsSunFill />
-                </button>
+                </div>
             </div>
         </div>
     );

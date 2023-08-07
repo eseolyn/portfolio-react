@@ -7,13 +7,12 @@
     gap: 5px;
 }
 .toggle_btn {
-    background-color: var(--navy);
+    background: var(--navy);
     color: var(--white);
     font-size: 20px;
     padding: 10px 10px 5px 10px;
     cursor: pointer;
     border-radius: 50%;
-    border: 0;
 }
 
 /* media query: on phone size, resize button to smaller */

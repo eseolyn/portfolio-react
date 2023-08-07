@@ -6,7 +6,7 @@ const Skills = () => {
             <div className="title">
                 <span>Skills</span>
             </div>
-            <div className="content skills_content">
+            <div className="content skillsContent">
                 <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
                     alt="html5"

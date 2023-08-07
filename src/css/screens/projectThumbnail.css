@@ -1,4 +1,4 @@
-.thumbNails_content {
+.thumbNailsContent {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -9,7 +9,7 @@
     border-radius: 2em; */
 }
 
-.thumbNail_item {
+.thumbNailItem {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +18,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.thumbNail_btn {
+.thumbNailBtn {
     height: 40px;
     width: 40px;
     border-radius: 50%;

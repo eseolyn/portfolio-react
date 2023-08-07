@@ -1,4 +1,4 @@
-.skills_content {
+.skillsContent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -8,7 +8,7 @@
     /* border: 1px solid var(--gray); */
 }
 
-.skills_content img {
+.skillsContent img {
     /* border: 1px solid var(--gray); */
     width: 10vw;
     max-width: 120px;

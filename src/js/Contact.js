@@ -36,15 +36,17 @@ const Contact = () => {
                 <div className="title">
                     <span>Contact</span>
                 </div>
-                <div className="content contact_content">
-                    <div className="contact_item contact_left">
-                        <span>want contact me?</span>
-                        <div className="contact_icon">
+                <div className="content contactContent">
+                    <div className="contactItem contactLeft">
+                        <div>want contact me?</div>
+                        <div className="contactIcons">
                             <BsGithub
+                                className="contactIcon"
                                 onClick={() => window.open(`${GithubUrl}`)}
                             />
-                            <SiNotion />
+                            <SiNotion className="contactIcon" />
                             <BiLogoGmail
+                                className="contactIcon"
                                 onClick={() =>
                                     handleCopyClipboard(`${GoogleEmail}`)
                                 }
@@ -53,32 +55,32 @@ const Contact = () => {
                         </div>
                     </div>
                     <form
-                        className="contact_item contact_form"
+                        className="contactItem contactForm"
                         onSubmit={onSubmit}
                     >
                         <input
                             name="fullName"
-                            className="contact_input"
+                            className="contactInput"
                             type="text"
                             placeholder="full name"
                             required
                         ></input>
                         <input
                             name="email"
-                            className="contact_input"
+                            className="contactInput"
                             type="email"
                             placeholder="your email"
                             required
                         ></input>
                         <textarea
                             name="message"
-                            className="contact_message"
+                            className="contactMessage"
                             placeholder="message"
                             rows={5}
                             cols={30}
                             required
                         ></textarea>
-                        <button className="contact_submit" type="submit">
+                        <button className="contactSubmit" type="submit">
                             Send
                         </button>
                     </form>

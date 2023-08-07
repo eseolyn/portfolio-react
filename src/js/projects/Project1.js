@@ -6,6 +6,7 @@ import portfolio_skills from "../../img/portfolio_img/portfolio_skills.png";
 
 const Project1 = () => {
     const { isDark } = useDark();
+    const project1Url = "https://github.com/eunseolYun/portfolio-react";
     return (
         <>
             <div className="projectCard">
@@ -15,12 +16,8 @@ const Project1 = () => {
                     ante, accumsan eleifend risus leo ut neque. Quisque tempus
                     lacinia bibendum.
                 </div>
-                <div>
-                    <img
-                        className="projectCard_img"
-                        src={portfolio_about}
-                        alt="portfolio_about"
-                    />
+                <div className="projectCard_img">
+                    <img src={portfolio_about} alt="portfolio_about" />
                 </div>
             </div>
             <div className="projectCard">
@@ -30,12 +27,8 @@ const Project1 = () => {
                     ante, accumsan eleifend risus leo ut neque. Quisque tempus
                     lacinia bibendum.
                 </div>
-                <div>
-                    <img
-                        className="projectCard_img"
-                        src={portfolio_projects}
-                        alt="portfolio_projects"
-                    />
+                <div className="projectCard_img">
+                    <img src={portfolio_projects} alt="portfolio_projects" />
                 </div>
             </div>
             <div className="projectCard">
@@ -45,15 +38,14 @@ const Project1 = () => {
                     ante, accumsan eleifend risus leo ut neque. Quisque tempus
                     lacinia bibendum.
                 </div>
-                <div>
-                    <img
-                        className="projectCard_img"
-                        src={portfolio_skills}
-                        alt="portfolio_skills"
-                    />
+                <div className="projectCard_img">
+                    <img src={portfolio_skills} alt="portfolio_skills" />
                 </div>
             </div>
-            <div className={"GoToRepoBtn" + (isDark ? " darkBtn" : "")}>
+            <div
+                className={"GoToRepoBtn" + (isDark ? " darkBtn" : "")}
+                onClick={() => window.open(`${project1Url}`)}
+            >
                 Go to Repository
             </div>
         </>

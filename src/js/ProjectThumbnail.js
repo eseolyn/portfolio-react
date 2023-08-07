@@ -10,14 +10,14 @@ const ProjectThumbnail = () => {
             <div className="title">
                 <span>Projects</span>
             </div>
-            <div className="content thumbNails_content">
-                <div className="thumbNail_item"> thumbnail 1</div>
-                <div className="thumbNail_item"> thumbnail 2</div>
-                <div className="thumbNail_item"> thumbnail 3</div>
+            <div className="content thumbNailsContent">
+                <div className="thumbNailItem"> thumbnail 1</div>
+                <div className="thumbNailItem"> thumbnail 2</div>
+                <div className="thumbNailItem"> thumbnail 3</div>
             </div>
             {/* thumbnail hover => anim size up */}
             <div
-                className={"thumbNail_btn" + (isDark ? " darkBtn" : "")}
+                className={"thumbNailBtn" + (isDark ? " darkBtn" : "")}
                 onClick={() => navigate("/projects")}
             >
                 more
