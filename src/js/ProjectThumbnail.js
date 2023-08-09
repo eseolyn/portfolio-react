@@ -10,7 +10,7 @@ const ProjectThumbnail = () => {
             <div className="title">
                 <span>Projects</span>
             </div>
-            <div className="content thumbNailsContent">
+            <div className="content thumbNailsContents">
                 <div className="thumbNailItem"> thumbnail 1</div>
                 <div className="thumbNailItem"> thumbnail 2</div>
                 <div className="thumbNailItem"> thumbnail 3</div>
