@@ -5,16 +5,16 @@ import { BiLogoGmail } from "react-icons/bi";
 // import { RiMailSendLine } from "react-icons/ri";
 
 const Contact = () => {
-    const [fullName, setFullName] = useState("");
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
     const onSubmit = (e) => {
         e.preventDefault();
-        setFullName(e.target.fullName.value);
+        setName(e.target.name.value);
         setEmail(e.target.email.value);
         setMessage(e.target.message.value);
-        e.target.fullName.value = "";
+        e.target.name.value = "";
         e.target.email.value = "";
         e.target.message.value = "";
     };
@@ -59,10 +59,10 @@ const Contact = () => {
                         onSubmit={onSubmit}
                     >
                         <input
-                            name="fullName"
+                            name="name"
                             className="contactInput"
                             type="text"
-                            placeholder="full name"
+                            placeholder="your name"
                             required
                         ></input>
                         <input
