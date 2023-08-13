@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link as ScrollTo } from "react-scroll";
 import { useDark } from "../../ThemeContext";
 
 const Navigation = () => {
     const { isDark } = useDark();
+    const [scrollTop, setScrollTop] = useState(0);
+
+    const onScroll = () => {
+        // 스크롤바 top의 위치값
+        const windowScroll = document.documentElement.scrollTop;
+        // 스크롤영역의 높이
+        const totalHeight =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+
+        // 스크롤된 퍼센테이지
+        const scrolled = (windowScroll / totalHeight) * 100;
+
+        setScrollTop(scrolled);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", onScroll);
+
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
     return (
         <nav className={"nav" + (isDark ? " dark" : "")}>
             <div className="navigation">
@@ -20,11 +42,13 @@ const Navigation = () => {
                     <div className="navigationItem">contact</div>
                 </ScrollTo>
             </div>
-            {/* scroll bar : position absolute, 위치 vw,em, mask?? */}
-            {/* or using progressBar tag */}
-            <div className="progressBar ">
+            {/* <div className="progressBar">
                 <progress id="progress" value="28" max="100"></progress>
-            </div>
+            </div> */}
+            <div
+                className={"progressBar" + (isDark ? " darkBtn" : "")}
+                style={{ width: `${scrollTop}%` }}
+            />
         </nav>
     );
 };

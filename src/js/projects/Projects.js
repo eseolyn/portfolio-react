@@ -32,6 +32,7 @@ const Projects = () => {
                                     : "")
                             }
                             onClick={() => setActiveTab(index)}
+                            key={index}
                         >
                             {el.header}
                         </div>
