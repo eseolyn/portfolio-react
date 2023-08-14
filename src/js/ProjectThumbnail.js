@@ -17,16 +17,14 @@ const ProjectThumbnail = (_, ref) => {
                 <div className="thumbNailItem"> thumbnail 1</div>
                 <div className="thumbNailItem"> thumbnail 2</div>
                 <div className="thumbNailItem"> thumbnail 3</div>
+                <button
+                    className={"thumbNailBtn" + (isDark ? " darkBtn" : "")}
+                    onClick={() => navigate("/projects")}
+                >
+                    more
+                </button>
             </div>
             {/* thumbnail hover => anim size up */}
-            <div
-                className={"thumbNailBtn" + (isDark ? " darkBtn" : "")}
-                onClick={() => navigate("/projects")}
-            >
-                more
-            </div>
-            {/* <button>more &rarr;</button>
-            button에 '/projects'로 가는 링크 걸기 */}
         </div>
     );
 };

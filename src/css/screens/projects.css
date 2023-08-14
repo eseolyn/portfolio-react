@@ -92,8 +92,8 @@
     background: var(--navy);
     color: var(--white);
     width: fit-content;
-    padding: 5px;
-    border-radius: 8px;
+    padding: 5px 12px;
+    border-radius: 15px;
     position: sticky;
     left: 100%;
     cursor: pointer;

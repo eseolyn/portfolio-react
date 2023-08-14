@@ -14,28 +14,50 @@
 .contactLeft {
     height: 100%;
     display: grid;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-    gap: 30px;
+    grid-template-rows: 1fr 1fr;
+    /* align-content: center; */
+    /* justify-content: center; */
+    /* justify-items: center; */
+    align-items: center;
     font-size: 2em;
 }
 
 .contactForm {
     display: flex;
     flex-direction: column;
-    height: 200px;
+    align-items: center;
 }
 .contactInput {
-    height: 2.5em;
     margin-bottom: 1em;
     min-height: 2em;
+    width: 100%;
+}
+.contactInput::placeholder {
+    color: var(--navy);
+    opacity: 0.5;
 }
 
 .contactMessage {
     resize: none;
     margin-bottom: 1em;
     min-height: 2em;
+    width: 100%;
+}
+
+.contactMessage::placeholder {
+    color: var(--navy);
+    opacity: 0.5;
+}
+
+.contactSubmit {
+    border: none;
+    width: fit-content;
+    height: 30px;
+    padding: 5px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    background: var(--navy);
+    color: var(--white);
 }
 
 .contactIcons {
@@ -47,4 +69,5 @@
 
 .contactIcon {
     width: fit-content;
+    cursor: pointer;
 }

@@ -1,10 +1,13 @@
 .thumbNailsContents {
     display: grid;
-    grid-auto-flow: column;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    justify-content: space-evenly;
+    justify-items: center;
+    justify-content: center;
     width: 70vw;
-    height: 150px;
+    height: 0;
+    padding-bottom: 17vw;
     border: 1px solid var(--red);
     gap: 10px;
 }
@@ -16,22 +19,29 @@
     height: 130px;
     width: 180px;
     border: 1px solid tomato;
-    background: gray;
+    background: darkgray;
     transition: 0.4s ease-in-out;
 }
 
-.thumbNailItem:hover {
+.thumbNailItem:not(:last-child):hover {
     transform: scale(1.2);
     z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .thumbNailBtn {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    display: flex;
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    border: none;
+    width: fit-content;
+    height: 30px;
+    padding: 5px 12px;
+    border-radius: 15px;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+    justify-self: end;
     background: var(--navy);
     color: var(--white);
     cursor: pointer;

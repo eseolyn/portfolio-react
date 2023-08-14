@@ -2,9 +2,11 @@ import React, { forwardRef, useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { SiNotion } from "react-icons/si";
 import { BiLogoGmail } from "react-icons/bi";
+import { useDark } from "../ThemeContext";
 // import { RiMailSendLine } from "react-icons/ri";
 
 const Contact = (_, ref) => {
+    const { isDark } = useDark();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -17,6 +19,7 @@ const Contact = (_, ref) => {
         e.target.name.value = "";
         e.target.email.value = "";
         e.target.message.value = "";
+        console.log(name, email, message);
     };
 
     const handleCopyClipboard = async (text) => {
@@ -83,7 +86,12 @@ const Contact = (_, ref) => {
                             cols={30}
                             required
                         ></textarea>
-                        <button className="contactSubmit" type="submit">
+                        <button
+                            className={
+                                "contactSubmit" + (isDark ? " darkBtn" : "")
+                            }
+                            type="submit"
+                        >
                             Send
                         </button>
                     </form>
