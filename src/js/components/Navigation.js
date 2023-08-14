@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link as ScrollTo } from "react-scroll";
+// import { Link as ScrollTo } from "react-scroll";
 import { useDark } from "../../ThemeContext";
 
-const Navigation = () => {
+const Navigation = ({ scrollRef }) => {
     const { isDark } = useDark();
     const [scrollTop, setScrollTop] = useState(0);
 
-    const onScroll = () => {
+    const onScrollBar = () => {
         // 스크롤바 top의 위치값
         const windowScroll = document.documentElement.scrollTop;
         // 스크롤영역의 높이
@@ -21,15 +21,27 @@ const Navigation = () => {
     };
 
     useEffect(() => {
-        window.addEventListener("scroll", onScroll);
-
-        return () => window.removeEventListener("scroll", onScroll);
+        window.addEventListener("scroll", onScrollBar);
+        return () => window.removeEventListener("scroll", onScrollBar);
     }, []);
+
+    const navItem = [
+        { index: 0, name: "About" },
+        { index: 1, name: "projects" },
+        { index: 2, name: "skills" },
+        { index: 3, name: "contact" },
+    ];
+    const [navIndex, setNavIndex] = useState(0);
+
+    useEffect(() => {
+        scrollRef.current[navIndex]?.scrollIntoView({ behavior: "smooth" });
+        setNavIndex(null);
+    }, [scrollRef, navIndex]);
 
     return (
         <nav className={"nav" + (isDark ? " dark" : "")}>
             <div className="navigation">
-                <ScrollTo to="about" spy={true} smooth={true}>
+                {/* <ScrollTo to="about" spy={true} smooth={true}>
                     <div className="navigationItem">About</div>
                 </ScrollTo>
                 <ScrollTo to="projectThumbnail" spy={true} smooth={true}>
@@ -40,11 +52,17 @@ const Navigation = () => {
                 </ScrollTo>
                 <ScrollTo to="contact" spy={true} smooth={true}>
                     <div className="navigationItem">contact</div>
-                </ScrollTo>
+                </ScrollTo> */}
+                {navItem.map(({ index, name }) => (
+                    <div
+                        key={index}
+                        className="navigationItem"
+                        onClick={() => setNavIndex(index)}
+                    >
+                        {name}
+                    </div>
+                ))}
             </div>
-            {/* <div className="progressBar">
-                <progress id="progress" value="28" max="100"></progress>
-            </div> */}
             <div
                 className={"progressBar" + (isDark ? " darkBtn" : "")}
                 style={{ width: `${scrollTop}%` }}

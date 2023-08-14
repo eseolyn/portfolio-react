@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navigation from "./js/components/Navigation";
 import Home from "./js/Home";
 import Projects from "./js/projects/Projects";
@@ -6,6 +6,7 @@ import { ThemeContextProvider } from "./ThemeContext";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
+    const scrollRef = useRef([]);
     return (
         <>
             <ThemeContextProvider>
@@ -15,8 +16,9 @@ function App() {
                             path="/"
                             element={
                                 <>
-                                    <Navigation />
-                                    <Home />
+                                    {/* scrollRef의 배열을 props로 넘겨줌 */}
+                                    <Navigation scrollRef={scrollRef} />
+                                    <Home ref={scrollRef} />
                                 </>
                             }
                         />

@@ -1,12 +1,15 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDark } from "../ThemeContext";
 
-const ProjectThumbnail = () => {
+const ProjectThumbnail = (_, ref) => {
     const { isDark } = useDark();
     const navigate = useNavigate();
     return (
-        <div className="projectThumbnail section">
+        <div
+            className="projectThumbnail section"
+            ref={(thumbnailRef) => (ref.current[1] = thumbnailRef)}
+        >
             <div className="title">
                 <span>Projects</span>
             </div>
@@ -28,7 +31,7 @@ const ProjectThumbnail = () => {
     );
 };
 
-export default ProjectThumbnail;
+export default forwardRef(ProjectThumbnail);
 
 // hover on thumbnail, anim effect(like auto scrolling)
 // or div horizontal scroll

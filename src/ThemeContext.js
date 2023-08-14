@@ -10,7 +10,7 @@ export const ThemeContextProvider = ({ children }) => {
         setIsDark((current) => !current);
         console.log(isDark);
     };
-    // true, false 찍히는게 이상하다?
+    // true, false 찍히는게 이상하다? => setState 비동기 문제
     return (
         <ThemeContext.Provider value={{ isDark, onToggle }}>
             {children}

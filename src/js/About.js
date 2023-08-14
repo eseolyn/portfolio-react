@@ -1,7 +1,7 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import mimoticon from "../img/memoticon_q.png";
 
-const About = () => {
+const About = (_, ref) => {
     /* if (isDark === undefined) {
         throw new Error(
             "useDarkState should be used within ThemeContextProvider"
@@ -9,7 +9,10 @@ const About = () => {
     } */
     return (
         <>
-            <div className="about section">
+            <div
+                className="about section"
+                ref={(aboutRef) => (ref.current[0] = aboutRef)}
+            >
                 <div className="title">
                     <span>About</span>
                 </div>
@@ -42,7 +45,7 @@ const About = () => {
     );
 };
 
-export default About;
+export default forwardRef(About);
 
 // <div className="top_half">
 //     <div className="desc">

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-const Skills = () => {
+const Skills = (_, ref) => {
     return (
-        <div className="skills section">
+        <div
+            className="skills section"
+            ref={(skillsRef) => (ref.current[2] = skillsRef)}
+        >
             <div className="title">
                 <span>Skills</span>
             </div>
@@ -57,6 +60,6 @@ const Skills = () => {
     );
 };
 
-export default Skills;
+export default forwardRef(Skills);
 
 // language, framework/library, cloud, tools, database

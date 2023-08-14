@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { SiNotion } from "react-icons/si";
 import { BiLogoGmail } from "react-icons/bi";
 // import { RiMailSendLine } from "react-icons/ri";
 
-const Contact = () => {
+const Contact = (_, ref) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -32,7 +32,10 @@ const Contact = () => {
     const GoogleEmail = "skopdt73@gmail.com";
     return (
         <>
-            <div className="contact section">
+            <div
+                className="contact section"
+                ref={(contactRef) => (ref.current[3] = contactRef)}
+            >
                 <div className="title">
                     <span>Contact</span>
                 </div>
@@ -90,7 +93,7 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default forwardRef(Contact);
 
 // tab 입력시 다음 element로 넘어가지 않게끔=> https://wazacs.tistory.com/52
 // send 누르면 전송확인 모달창 띄우기
