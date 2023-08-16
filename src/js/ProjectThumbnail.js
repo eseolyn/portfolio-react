@@ -1,6 +1,9 @@
 import React, { forwardRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDark } from "../ThemeContext";
+import portfolio_about from "../img/portfolio_img/portfolio_about.png";
+import portfolio_projects from "../img/portfolio_img/portfolio_projects.png";
+import portfolio_skills from "../img/portfolio_img/portfolio_skills.png";
 
 const ProjectThumbnail = (_, ref) => {
     const { isDark } = useDark();
@@ -14,9 +17,39 @@ const ProjectThumbnail = (_, ref) => {
                 <span>Projects</span>
             </div>
             <div className="content thumbNailsContents">
-                <div className="thumbNailItem"> thumbnail 1</div>
-                <div className="thumbNailItem"> thumbnail 2</div>
-                <div className="thumbNailItem"> thumbnail 3</div>
+                <div className="thumbNailItem thumbNail1">
+                    <img src={portfolio_about} alt="example" />
+                    <div className="thumbNailItem_desc">
+                        <div>Kakao Clone</div>
+                        <p>
+                            Vestibulum luctus finibus condimentum. Praesent quis
+                            tempus velit. Maecenas sapien.
+                        </p>
+                    </div>
+                    {/* about */}
+                </div>
+                <div className="thumbNailItem thumbNail2">
+                    <img src={portfolio_projects} alt="example" />
+                    <div className="thumbNailItem_desc">
+                        <div>Zoom Clone</div>
+                        <p>
+                            Donec quis lacus ut leo accumsan dignissim non
+                            lobortis neque.
+                        </p>
+                    </div>
+                    {/* projects */}
+                </div>
+                <div className="thumbNailItem thumbNail3">
+                    <img src={portfolio_skills} alt="example" />
+                    <div className="thumbNailItem_desc">
+                        <div>Youtube Clone</div>
+                        <p>
+                            Duis sollicitudin ligula et justo consectetur
+                            aliquam. Vivamus nec congue.
+                        </p>
+                    </div>
+                    {/* skills */}
+                </div>
                 <button
                     className={"thumbNailBtn" + (isDark ? " darkBtn" : "")}
                     onClick={() => navigate("/projects")}

@@ -1,14 +1,28 @@
-.tabs {
+.projectsNav {
+    height: 100%;
     display: grid;
-    grid-template-rows: 10% 90%;
     place-items: center center;
+    height: 60px;
+    font-weight: 500;
+    font-size: 1.8em;
+}
+
+.tabs {
     height: 100vh;
-    min-height: 720px;
-    padding: 5vh 15vw;
-    padding-top: 100px;
+    /* min-height: 720px; */
+    padding: 60px 15vw;
+    /* padding-top: 100px; */
     width: 100%;
     background: var(--white);
     color: var(--navy);
+}
+
+.tabWrap {
+    /* display: grid;
+    grid-template-rows: 10% 90%; */
+    padding-top: 30px;
+    place-items: center center;
+    max-width: 1000px;
 }
 
 .projectHeaders {
@@ -16,7 +30,7 @@
     grid-template-columns: repeat(4, 1fr);
     /* place-items: center center; */
     align-self: flex-end;
-    height: 100%;
+    height: 60px;
     max-height: 50px;
     width: 100%;
 }
@@ -25,7 +39,7 @@
     width: 100%;
     height: 100%;
     border: 1px solid var(--navy);
-    border-bottom: 5px solid var(--navy);
+    border-bottom: 3px solid var(--navy);
     border-radius: 8px 8px 0 0;
     cursor: pointer;
     display: grid;
@@ -34,30 +48,16 @@
     font-size: 18px;
 }
 
-/* .projectHeader:not(:last-child).activeTab:after {
-    content: "1";
-    display: block;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    bottom: 0;
-    right: -10px;
-    background: tomato;
-    border: 3px solid var(--white);
-} */
-
 .activeTab {
-    border: 5px solid var(--navy);
+    border: 3px solid var(--navy);
     border-bottom: none;
 }
 
 .tabBody {
-    border: 5px solid var(--navy);
+    border: 3px solid var(--navy);
     border-top: none;
     border-radius: 0px 0px 10px 10px;
     align-self: flex-start;
-    /* max-width: 1000px; */
-    height: 100%;
     width: 100%;
     padding: 24px;
     position: relative;
@@ -88,6 +88,7 @@
     max-height: 200px;
     border: 1px solid var(--navy);
 }
+
 .GoToRepoBtn {
     background: var(--navy);
     color: var(--white);
@@ -101,16 +102,16 @@
 
 .darkTab {
     border: 1px solid var(--white);
-    border-bottom: 5px solid var(--white);
+    border-bottom: 3px solid var(--white);
 }
 
 .activeDarkTab {
-    border: 5px solid var(--white);
+    border: 3px solid var(--white);
     border-bottom: none;
 }
 
 .darkBorder {
-    border: 5px solid var(--white);
+    border: 3px solid var(--white);
     border-top: none;
 }
 

@@ -3,7 +3,7 @@ import Project1 from "./Project1";
 import Project2 from "./Project2";
 import Project3 from "./Project3";
 import ToggleBtn from "../components/ToggleBtn";
-import ProjectsNav from "../components/ProjectsNav";
+import ProjectsNav from "./ProjectsNav";
 import { useDark } from "../../ThemeContext";
 
 // taps
@@ -20,26 +20,28 @@ const Projects = () => {
         <>
             <ProjectsNav />
             <div className={"tabs" + (isDark ? " dark" : "")}>
-                <div className="projectHeaders">
-                    {tabArr.map((el, index) => (
-                        <div
-                            className={
-                                "projectHeader" +
-                                (isDark ? " darkTab" : "") +
-                                (activeTab === index ? " activeTab" : "") +
-                                (isDark && activeTab === index
-                                    ? " activeDarkTab"
-                                    : "")
-                            }
-                            onClick={() => setActiveTab(index)}
-                            key={index}
-                        >
-                            {el.header}
-                        </div>
-                    ))}
-                </div>
-                <div className={"tabBody" + (isDark ? " darkBorder" : "")}>
-                    {tabArr[activeTab].content}
+                <div className="tabWrap">
+                    <div className="projectHeaders">
+                        {tabArr.map((el, index) => (
+                            <div
+                                className={
+                                    "projectHeader" +
+                                    (isDark ? " darkTab" : "") +
+                                    (activeTab === index ? " activeTab" : "") +
+                                    (isDark && activeTab === index
+                                        ? " activeDarkTab"
+                                        : "")
+                                }
+                                onClick={() => setActiveTab(index)}
+                                key={index}
+                            >
+                                {el.header}
+                            </div>
+                        ))}
+                    </div>
+                    <div className={"tabBody" + (isDark ? " darkBorder" : "")}>
+                        {tabArr[activeTab].content}
+                    </div>
                 </div>
             </div>
             <ToggleBtn />

@@ -1,6 +1,6 @@
 import React from "react";
 import { useDark } from "../../ThemeContext";
-import BackBtn from "./BackBtn";
+import BackBtn from "../components/BackBtn";
 
 const ProjectsNav = () => {
     const { isDark } = useDark();
@@ -9,7 +9,7 @@ const ProjectsNav = () => {
         <>
             <nav className={"nav" + (isDark ? " dark" : "")}>
                 <BackBtn />
-                <div className="title">
+                <div className="projectsNav">
                     <span>Projects</span>
                 </div>
             </nav>

@@ -2,17 +2,17 @@
 
 using react
 
-~ 720px : about img size, thumbnail 3 -> 2, contact left
-721 ~ 1024px
+~ 620px: contact section
+621 ~ 1024px: mimoji size, contact section ratio
 1025px ~ : leftside title, leftside projects tab header, view ratio
 
 Nav => home about projects contact
 
 -   -home
 
--   -   -intro about
+-   -   -about
+-   -   -project thumbnail => more(btn) => projects page
 -   -   -(skills)
--   -   -project thumbnail => more btn => page
 -   -   -contact(form)
 
 -   -projects
